@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Noto+Sans+Tagbanwa&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{ /* variáveis no CSS */
+    --cor-fundo: #000000;
+    --cor-letra: #f7f1f1;
+}
+
+body{
+    background:var(--cor-fundo); /* como puxar o valor de uma variável no CSS */
+    box-sizing: border-box;
+    color: var(--cor-letra);
+}
+
+.cabecalho{
+    display: flex; /* é necessario colocar o display: flex no elemento pai para ativar o flexbox. */
+    gap: 80px;;
+}
+
+.cabeca{
+    padding: 2% 0% 0% 15% ;
+}
+
+.cabecalink{
+    color: #22c3fd;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 1.5rem; /* rem é igual a 1px dividido por 16. */
+    font-weight: 600px;
+}
+
+
+
+.destaque{
+    color:#22D4FD;
+}
+
+.apresentacao{
+    padding: 5% 10%;
+    display: flex;
+    align-items: center;   
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.conteudo{
+    width: 50%;  /* Coloquei a porcentagem ao invés de px e o site ficou mais responsivo. */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.titulo{
+    font-size: 2.25rem;
+    font-family:'Noto Sans Tagbanwa', sans-serif;
+}
+
+.paragrafo{
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.botoes{
+    display: flex; /* loga o flexbox */
+    flex-direction: column; /* da a direção dos elementos dentro do flexbox */
+    justify-content: space-between; /* a forma de espaçamento desses elementos */
+    align-items: center; /* a possição desses elementos */
+    gap: 35px; /* o espaço entre esses elementos */
+}
+
+.redes{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; 
+    font-size: 1.5rem;
+}
+
+.botaoEstilo{
+    display: flex;
+    justify-content: center; /* para colocar a imagem e o texto novamente após ativar o  display flex. */
+    gap: 16px;
+
+    color: #f6f6f6;
+    border-radius: 8px;
+    width: 50%;
+    padding: 21.5px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: 2px solid #22c3fd;
+       
+}
+
+.botaoEstilo:hover{
+    background-color: #f80d0d;
+    color: rgb(4, 4, 4);
+}
+
+.imagens{
+    width: 50%;
+}
+
+a{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.rodape{
+    text-align: center;
+    background-color: #22c3fd;
+    padding: 20px;
+    font-size: 0.625rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400px;
+}
+
+@media(max-width: 1058px){ /* para deixar o site com um outro formato, com a tela menor do que 1058px. RESPONSIVIDADE */
+
+    .apresentacao{
+        flex-direction: column-reverse; /* Colocou os itens do site em uma coluna e inverteu a ordem desses intens (a foto foi para cima). */
+        padding: 5%;
+    }
+
+    .cabecalho{
+        padding: 10%;  
+    }
+
+    .cabeca{
+        justify-content: center; /* Para alinhar o menu no centro da pagina */
+    }
+
+    .conteudo{
+        width: auto; /* O auto serve para que o conteudo ocupe todo tamanho da tela, preenche o espaço disponível automaticamente. */
+    }
+}
+
